@@ -32,11 +32,23 @@
             $input_search = "pie";
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
-            $new_RepeatCounter->setValidated();
             $new_RepeatCounter->CountRepeats();
             $result = $new_RepeatCounter->getMatches();
 
             $this->assertEquals(1, $result);
+        }
+
+        function test_DeclinePartialMatches()
+        {
+            $input_string = "I would not like a piece of cake";
+            $input_search = "pie";
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $new_RepeatCounter->CountRepeats();
+            $result = $new_RepeatCounter->getMatches();
+
+            $this->assertEquals(0, $result);
+
         }
     }
 ?>

@@ -36,6 +36,7 @@
 
         function CountRepeats()
         {
+            $this->setValidated();
             if ($this->validated == true)
             {
                 $match_count = 0;
