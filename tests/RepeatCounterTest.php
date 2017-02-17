@@ -80,5 +80,16 @@
 
             $this->assertEquals(1, $result);
         }
+        function test_multpleRecognitions()
+        {
+            $input_string = "Would I like some pie? I love pie.  I would particularly like a piece of apple pie.";
+            $input_search = "pie";
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->getMatches();
+
+            $this->assertEquals(3, $result);
+
+        }
     }
 ?>
