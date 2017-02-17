@@ -40,7 +40,7 @@
             if ($this->validated == true)
             {
                 $match_count = 0;
-                $exploded_string = explode(" ", $this->string);
+                $exploded_string = explode(" ", strtolower($this->string));
                 foreach ($exploded_string as $word)
                 {
 
