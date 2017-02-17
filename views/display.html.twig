@@ -1,12 +1,13 @@
 {% extends "input.html.twig" %}
 
 {% block display %}
-{ validated }
 {% if validated %}
-    <h4> Your word '{{ search }}' appeared in the phrase '{{ input }}' a total number of '{{ output }}' times. </h4>
+    <h4> Your word '{{ search }}' appeared in the phrase '{{ input }}' a total number of <em>{{ output }}</em> time(s). </h4>
 {% else %}
     <h2>Sorry, but for some reason your entry was not considered valid.  Please consider the following rules and conditions:</h2>
     <h3>1) Both the input phrase and the search phrase fields must be filled.</h3>
-    <h4>2) The search phrase can not contain any non-alphabetical characters.</h4>
+    <h4>2) The search phrase may not contain any non-alphabetical characters.</h4>
+    <h5>3) You must not be currently suffering from eCurse, Divine Retribution (DR), Act Of God (AoG) or similar products and services. </h5>
+    <h6>4) You must not be under direct interdict by the creator of this app. </h6>
 {% endif %}
 {% endblock %}

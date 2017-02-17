@@ -2,3 +2,11 @@ h1
 {
   font-size: 60px;
 }
+body
+{
+  font-family: 'EB Garamond', serif;
+}
+.tiny
+{
+    font-size:8px;
+}
