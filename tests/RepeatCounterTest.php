@@ -58,5 +58,16 @@
 
             $this->assertEquals(1, $result);
         }
+
+        function test_withPunctuation()
+        {
+            $input_string = "Pie, is it the best dessert or the best food?";
+            $input_search = "pie";
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->getMatches();
+
+            $this->assertEquals(1, $result);
+        }
     }
 ?>

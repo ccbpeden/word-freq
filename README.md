@@ -15,7 +15,7 @@ A program that searches a user provided string for whole-word instances of a use
 | Program recognizes a word within a string | "I like pie" | 1 | string has a whole word match
 | Program recognizes a word within a string, but not partial matches | "I would not like a piece of cake" // "pie"| 0 | string has a partial but not a whole word match.
 | Program recognizes a word within a string regardless of capitalization | "Pie is my favorite dessert." // "pie"  | 1 | string has one match with different capitalization
-| Program recognizes a word within a string regardless of punctuation | "Pie, is it the best dessert or the best food." | 1 | string has one match with punctuation attached
+| Program recognizes a word within a string regardless of punctuation | "Pie, is it the best dessert or the best food?" | 1 | string has one match with punctuation attached
 | Program recognizes multiple words within a string | "Would I like some pie? I love pie.  I would particularly like a piece of apple pie" // "pie" | 3 | string has multiple instances of the searched variable and one partial match.
 
 

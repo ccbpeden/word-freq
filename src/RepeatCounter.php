@@ -34,7 +34,7 @@
             return $this->validated;
         }
 
-        function CountRepeats()
+        function countRepeats()
         {
             $this->setValidated();
             if ($this->validated == true)
@@ -55,7 +55,7 @@
 
         function getMatches()
         {
-            $this->CountRepeats();
+            $this->countRepeats();
             return $this->number_of_matches;
         }
     }
