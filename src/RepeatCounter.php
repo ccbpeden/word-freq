@@ -55,6 +55,7 @@
 
         function getMatches()
         {
+            $this->CountRepeats();
             return $this->number_of_matches;
         }
     }

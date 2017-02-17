@@ -32,7 +32,6 @@
             $input_search = "pie";
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
-            $new_RepeatCounter->CountRepeats();
             $result = $new_RepeatCounter->getMatches();
 
             $this->assertEquals(1, $result);
@@ -44,11 +43,20 @@
             $input_search = "pie";
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
-            $new_RepeatCounter->CountRepeats();
             $result = $new_RepeatCounter->getMatches();
 
             $this->assertEquals(0, $result);
+        }
 
+        function test_variableCaps()
+        {
+            $input_string = "Pie is my favorite dessert";
+            $input_search = "pie";
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->getMatches();
+
+            $this->assertEquals(1, $result);
         }
     }
 ?>
