@@ -69,5 +69,16 @@
 
             $this->assertEquals(1, $result);
         }
+
+        function test_withContractions()
+        {
+            $input_string = "This pie's flavor is most delicious.";
+            $input_search = "pie";
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->getMatches();
+
+            $this->assertEquals(1, $result);
+        }
     }
 ?>

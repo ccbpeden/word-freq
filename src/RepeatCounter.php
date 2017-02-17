@@ -43,7 +43,7 @@
                 $exploded_string = explode(" ", strtolower($this->string));
                 foreach ($exploded_string as $word)
                 {
-                    $trimmedword = rtrim($word, ",;.!?:()'");
+                    $trimmedword = trim($word, ",;.!?:()'");
                     if ($trimmedword == $this->search){
                         $match_count ++;
                         echo "increment match_count to ".$match_count;
