@@ -44,6 +44,13 @@
                 foreach ($exploded_string as $word)
                 {
                     $trimmedword = trim($word, ",;.!?:()'");
+                    $contraction_location = strpos($trimmedword, "'");
+                    if ($contraction_location)
+                    {
+                        $trimmedword = substr($trimmedword, 0, $contraction_location);
+                    }
+                    echo $trimmedword;
+                    // palpatine's 11
                     if ($trimmedword == $this->search){
                         $match_count ++;
                         echo "increment match_count to ".$match_count;
