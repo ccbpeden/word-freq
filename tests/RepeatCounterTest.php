@@ -9,7 +9,7 @@
             $input_search = "pie";
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
-            $result = array($new_RepeatCounter->getInput_string, $new_RepeatCounter->getInput_search);
+            $result = array($new_RepeatCounter->getString(), $new_RepeatCounter->getSearch());
 
             $this->assertEquals(array("I like pie", "pie"), $result);
         }
