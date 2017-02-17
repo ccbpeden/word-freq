@@ -6,7 +6,6 @@
         private $validated;
         private $number_of_matches;
 
-
         function __construct($input_string, $input_search)
         {
             $this->string = $input_string;
@@ -49,11 +48,9 @@
                     {
                         $trimmedword = substr($trimmedword, 0, $contraction_location);
                     }
-                    echo $trimmedword;
-                    // palpatine's 11
-                    if ($trimmedword == $this->search){
+                    if ($trimmedword == $this->search)
+                    {
                         $match_count ++;
-                        echo "increment match_count to ".$match_count;
                     }
                 }
                 $this->number_of_matches = $match_count;
