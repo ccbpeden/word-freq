@@ -1,10 +1,9 @@
 {% extends "input.html.twig" %}
 
 {% block display %}
-{% if validated is true %}
-    <h4> Your word {{ search }} appeared in the phrase {{ input }} a total number of {{ output }} times. </h4>
-{% endif %}
-{% if validated is false %}
+{% if validated %}
+    <h4> Your word '{{ search }}' appeared in the phrase '{{ input }}' a total number of '{{ output }}' times. </h4>
+{% else %}
     <h2>Sorry, but for some reason your entry was not considered valid.  Please consider the following rules and conditions:</h2>
     <h3>1) Both the input phrase and the search phrase fields must be filled.</h3>
     <h4>2) The search phrase can not contain any non-alphabetical characters.</h4>

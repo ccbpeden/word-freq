@@ -26,8 +26,9 @@
 
         function setValidated()
         {
-            if(!empty($this->string) && !empty($this->search))
+            if(!empty($this->string) && !empty($this->search) && ctype_alnum($this->search))
             {
+
                 $this->validated = true;
             }
             return $this->validated;
