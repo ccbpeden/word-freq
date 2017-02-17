@@ -12,6 +12,7 @@
             $this->string = $input_string;
             $this->search = $input_search;
             $this->validated = false;
+            $this->number_of_matches = 0;
         }
 
         function getString()
@@ -31,6 +32,29 @@
                 $this->validated = true;
             }
             return $this->validated;
+        }
+
+        function CountRepeats()
+        {
+            if ($this->validated == true)
+            {
+                $match_count = 0;
+                $exploded_string = explode(" ", $this->string);
+                foreach ($exploded_string as $word)
+                {
+
+                    if ($word == $this->search){
+                        $match_count ++;
+                        echo "increment match_count to ".$match_count;
+                    }
+                }
+                $this->number_of_matches = $match_count;
+            }
+        }
+
+        function getMatches()
+        {
+            return $this->number_of_matches;
         }
     }
 ?>
