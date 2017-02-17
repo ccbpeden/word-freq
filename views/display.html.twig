@@ -1,6 +1,7 @@
 {% extends "input.html.twig" %}
 
 {% block display %}
+{ validated }
 {% if validated %}
     <h4> Your word '{{ search }}' appeared in the phrase '{{ input }}' a total number of '{{ output }}' times. </h4>
 {% else %}

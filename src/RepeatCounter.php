@@ -26,6 +26,7 @@
 
         function setValidated()
         {
+            echo ctype_alnum($this->search);
             if(!empty($this->string) && !empty($this->search) && ctype_alnum($this->search))
             {
 
@@ -41,6 +42,7 @@
             {
                 $match_count = 0;
                 $exploded_string = explode(" ", strtolower($this->string));
+                $shrunken_search = strtolower($this->search);
                 foreach ($exploded_string as $word)
                 {
                     $trimmedword = trim($word, ",;.!?:()'");
@@ -49,7 +51,7 @@
                     {
                         $trimmedword = substr($trimmedword, 0, $contraction_location);
                     }
-                    if ($trimmedword == $this->search)
+                    if ($trimmedword == $shrunken_search)
                     {
                         $match_count ++;
                     }

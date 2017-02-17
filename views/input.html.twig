@@ -4,35 +4,44 @@
         <meta charset="utf-8">
         <title>Word Frequency Finder</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="container">
-            <div class="jumbotron">
-                <h1>Word Frequency Finder</h1>
-                <div>
-                    <h4>...being a tool for searching a phrase or set of phrases for a particular word and returns the frequency with which it discovers instances of the word or string of characters....</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Word Frequency Finder</h1>
                 </div>
+                <div class="col-md-6">
+                    <img src="img/spyglass.jpg" alt="a magnifying glass" />
+                </div>
+            </div>
+            <div>
+                <h4>...being a tool for searching a phrase or set of phrases for a particular word and returns the frequency with which it discovers instances of the word or string of characters....</h4>
             </div>
             <div class="container">
                 <div class="form-group">
                     <form action="/display" method="post">
                         <div>
                             <label for="input_string">Enter the phrase or set of phrases you would like to search</label>
-                            <input type="text" name="input_string">
+                            <input class="form-control" type="text" name="input_string">
                         </div>
                         <div>
                             <label for="input_search">Enter the word the frequency of which you would like to discover!</label>
-                            <input type="text" name="input_search">
+                            <input class="form-control" type="text" name="input_search">
                         </div>
-                        <button type="submit" name="submit">Searchinatize!</button>
+                        <br>
+                        <button class="btn btn-primary" type="submit" name="submit">Searchinatize!</button>
                     </form>
                 </div>
-                <div>
+                <div class="jumbotron">
                     {% block display %}
                     <h3>Your results will display here!</h3>
                     {% endblock %}
                 </div>
             </div>
+            <p> Copyright Charles Peden 2017 </p>
+            <p> Questions, Comments, or Concerns?  Contact the author at <a href="mailto:ccbpeden@warpmail.net">ccbpeden@warpmail.net</a>
         </div>
     </body>
 </html>

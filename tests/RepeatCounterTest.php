@@ -51,7 +51,7 @@
         function test_variableCaps()
         {
             $input_string = "Pie is my favorite dessert";
-            $input_search = "pie";
+            $input_search = "Pie";
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
             $result = $new_RepeatCounter->getMatches();
