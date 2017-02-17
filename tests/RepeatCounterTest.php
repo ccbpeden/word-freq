@@ -21,7 +21,7 @@
 
             $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
 
-            $result = $new_RepeatCounter->validateInput();
+            $result = $new_RepeatCounter->setValidated();
 
             $this->assertEquals(true, $result);
         }

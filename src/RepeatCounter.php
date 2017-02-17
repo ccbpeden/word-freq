@@ -23,5 +23,14 @@
         {
             return $this->search;
         }
+
+        function setValidated()
+        {
+            if(!empty($this->string) && !empty($this->search))
+            {
+                $this->validated = true;
+            }
+            return $this->validated;
+        }
     }
 ?>
