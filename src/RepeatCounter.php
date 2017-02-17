@@ -62,5 +62,10 @@
             $this->countRepeats();
             return $this->number_of_matches;
         }
+
+        function getValidated()
+        {
+            return $this->validated;
+        }
     }
 ?>
