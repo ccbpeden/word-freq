@@ -25,5 +25,17 @@
 
             $this->assertEquals(true, $result);
         }
+
+        function test_RecognizeWord()
+        {
+            $input_string = "I like pie";
+            $input_search = "pie";
+
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->CountRepeats();
+
+            $this->assertEquals(1, $result);
+        }
     }
 ?>
