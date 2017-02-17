@@ -11,6 +11,7 @@ A program that searches a user provided string for whole-word instances of a use
 |Behavior|Input|Output|Justification|
 |--------|-----|------|-------|
 |Program successfully instantiates Class, getters work correctly | "I like pie"  // "pie" | "I like pie" "pie" | basic strings easily returnable by getters
+|Program successfully validates Input | "I like pie" // "pie" | true | because default validation state set to false, validation will only set to true if conditions passed.
 | Program recognizes a word within a string | "I like pie" | 1 | string has a whole word match
 | Program recognizes a word within a string, but not partial matches | "I would not like a piece of cake" // "pie"| 0 | string has a partial but not a whole word match.
 | Program recognizes a word within a string regardless of capitalization | "Pie is my favorite dessert." // "pie"  | 1 | string has one match with different capitalization

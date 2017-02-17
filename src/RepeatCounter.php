@@ -11,6 +11,7 @@
         {
             $this->string = $input_string;
             $this->search = $input_search;
+            $this->validated = false;
         }
 
         function getString()

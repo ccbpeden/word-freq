@@ -13,5 +13,17 @@
 
             $this->assertEquals(array("I like pie", "pie"), $result);
         }
+
+        function test_Validator()
+        {
+            $input_string = "I like pie";
+            $input_search = "pie";
+
+            $new_RepeatCounter = New RepeatCounter($input_string, $input_search);
+
+            $result = $new_RepeatCounter->validateInput();
+
+            $this->assertEquals(true, $result);
+        }
     }
 ?>
